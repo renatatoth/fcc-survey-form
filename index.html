@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+    <title>FreeCodeCamp Survey Page</title>
+</head>
+<body>
+    <div class="content-box">
+        <aside class="sidebar">
+            <img class="sidebar__logo" src="img/fcc-logo.png" alt="FreeCodeCamp logo">
+        </aside>
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header__main" id="title">We value your insight</h1>
+                <p class="header__desc" id="description">Thank you for taking the time to help us improve the platform
+                    by submitting
+                    this survey.</p>
+            </header>
+            <form class="form" id="survey-form">
+                <section class="form__page" id="page-1">
+                    <div class="form__form-group">
+                        <label for="name" class="form__label" id="name-label">Name</label>
+                        <input type="text" class="form__input" id="name" name="name" placeholder="John Doe" required>
+                        <span class="form__error-msg"></span>
+                    </div>
+                    <div class="form__form-group">
+                        <label for="email" class="form__label" id="email-label">Email</label>
+                        <input type="text" class="form__input" id="email" name="email"
+                               placeholder="john.doe@example.com" required>
+                        <span class="form__error-msg"></span>
+                    </div>
+                    <div class="form__form-group">
+                        <label for="number" class="form__label" id="number-label">Age (optional)</label>
+                        <input type="number" class="form__input" id="number" name="age" min="0" max="120"
+                               placeholder="">
+                    </div>
+                </section>
+
+                <section class="form__page hidden" id="page-2">
+                    <div class="form__form-group">
+                        <label for="dropdown" class="form__label">Which option best describes your current role?</label>
+                        <select name="role" id="dropdown" class="form__select" required>
+                            <option value="" hidden selected>Select current role</option>
+                            <option value="student" class="form__select-option">Student</option>
+                            <option value="worker" class="form__select-option">Full Time Job</option>
+                            <option value="leaner" class="form__select-option">Full Time Learner</option>
+                            <option value="none" class="form__select-option">Prefer not to say</option>
+                            <option value="other" class="form__select-option">Other</option>
+                        </select>
+                        <span class="form__error-msg"></span>
+                    </div>
+                    <div class="form__form-group">
+                        <label for="fav-feature" class="form__label">What is your favorite feature of
+                            freeCodeCamp?</label>
+                        <select name="fav-feature" id="fav-feature" class="form__select" required>
+                            <option value="" hidden selected class="form__select-option">Select an option</option>
+                            <option value="challenges" class="form__select-option">Challenges</option>
+                            <option value="projects" class="form__select-option">Projects</option>
+                            <option value="community" class="form__select-option">Community</option>
+                            <option value="open-source" class="form__select-option">Open Source</option>
+                        </select>
+                        <span class="form__error-msg"></span>
+                    </div>
+                </section>
+
+                <section class="form__page hidden" id="page-3">
+                    <div class="form__form-group">
+                        <p class="form__label">What would you like to see improved? (Check all that apply)</p>
+                        <div class="form__input-box">
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="frontend" name="improve" value="frontend">
+                                <label for="frontend" class="form__label">Front-end Projects</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="backend" name="improve" value="backend">
+                                <label for="backend" class="form__label">Back-end Projects</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="data-vis" name="improve" value="data-vis">
+                                <label for="data-vis" class="form__label">Data Visualization</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="challenges" name="improve"
+                                       value="challenges">
+                                <label for="challenges" class="form__label">Challenges</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="os-community" name="improve"
+                                       value="os-community">
+                                <label for="os-community" class="form__label">Open Source Community</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="gitter-help" name="improve"
+                                       value="gitter-help">
+                                <label for="gitter-help" class="form__label">Gitter help rooms</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="videos" name="improve" value="videos">
+                                <label for="videos" class="form__label">Videos</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="meetups" name="improve" value="meetups">
+                                <label for="meetups" class="form__label">City meetups</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="wiki" name="improve" value="wiki">
+                                <label for="wiki" class="form__label">Wiki</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="forum" name="improve" value="forum">
+                                <label for="forum" class="form__label">Forum</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="checkbox" class="form__input" id="more-courses" name="improve"
+                                       value="more-courses">
+                                <label for="more-courses" class="form__label">Additional Courses</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="form__page hidden" id="page-4">
+                    <div class="form__form-group">
+                        <p class="form__label">Would you recommend freeCodeCamp to a friend?</p>
+                        <div class="form__input-box">
+                            <div class="form__input-box-item">
+                                <input type="radio" class="form__input" id="definitely" name="recommend"
+                                       value="definitely" required>
+                                <label for="definitely" class="form__label">Definitely</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="radio" class="form__input" id="maybe" name="recommend" value="maybe">
+                                <label for="maybe" class="form__label">Maybe</label>
+                            </div>
+                            <div class="form__input-box-item">
+                                <input type="radio" class="form__input" id="not-sure" name="recommend" value="not-sure">
+                                <label for="not-sure" class="form__label">Not sure</label>
+                            </div>
+                            <span class="form__error-msg"></span>
+                        </div>
+                    </div>
+                    <div class="form__form-group">
+                        <label for="comments" class="form__label">Any comments or suggestions? (optional)</label>
+                        <textarea name="comments" class="form__textarea" id="comments" cols="70" rows="7"></textarea>
+                    </div>
+                </section>
+                <div class="form_btn-box">
+                    <button type="button" class="form__btn form__btn--previous hidden">&lt; Previous</button>
+                    <button type="button" class="form__btn form__btn--next">Next &gt;</button>
+                    <button type="submit" class="form__btn form__btn--submit hidden" id="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="progress">
+               <div class="progress__bar"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
