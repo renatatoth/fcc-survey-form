@@ -8,15 +8,15 @@ html {
     font-size: 62.5%
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 62.5em) {
     html {
-        font-size: 50%
+        font-size: 56.25%
     }
 }
 
-@media only screen and (max-width: 56.25em) {
+@media only screen and (max-width: 31.25em) {
     html {
-        font-size: 68.75%
+        font-size: 75%
     }
 }
 
@@ -29,19 +29,19 @@ body {
 }
 
 .slide-in-right {
-    -webkit-animation: slide-in-right 0.5s forwards;
-    animation: slide-in-right 0.5s forwards
+    -webkit-animation: slide-in-right 0.4s forwards;
+    animation: slide-in-right 0.4s forwards
 }
 
 .slide-in-left {
-    -webkit-animation: slide-in-left 0.5s forwards;
-    animation: slide-in-left 0.5s forwards
+    -webkit-animation: slide-in-left 0.4s forwards;
+    animation: slide-in-left 0.4s forwards
 }
 
 @-webkit-keyframes slide-in-right {
     0% {
         transform: translateX(100%);
-        opacity: 100;
+        opacity: 0;
         display: block
     }
     100% {
@@ -54,7 +54,7 @@ body {
 @keyframes slide-in-right {
     0% {
         transform: translateX(100%);
-        opacity: 100;
+        opacity: 0;
         display: block
     }
     100% {
@@ -67,7 +67,7 @@ body {
 @-webkit-keyframes slide-in-left {
     0% {
         transform: translateX(-100%);
-        opacity: 100;
+        opacity: 0;
         display: block
     }
     100% {
@@ -80,7 +80,7 @@ body {
 @keyframes slide-in-left {
     0% {
         transform: translateX(-100%);
-        opacity: 100;
+        opacity: 0;
         display: block
     }
     100% {
@@ -98,12 +98,24 @@ body {
     margin-bottom: 1rem
 }
 
+@media only screen and (max-width: 31.25em) {
+    .header__main {
+        line-height: 1
+    }
+}
+
 .header__desc {
     width: 75%;
     font-family: "Raleway", sans-serif;
     font-size: 1.5rem;
     color: #646464;
     line-height: 1.5
+}
+
+@media only screen and (max-width: 31.25em) {
+    .header {
+        width: 100%
+    }
 }
 
 .form_btn-box {
@@ -148,6 +160,12 @@ body {
     height: 60%
 }
 
+@media only screen and (max-width: 62.5em) {
+    .form {
+        height: 100%
+    }
+}
+
 .form__form-group {
     margin: 3rem 0
 }
@@ -164,10 +182,16 @@ body {
 .form__input {
     display: block;
     margin-bottom: .75rem;
-    width: 70%;
+    width: 60%;
     height: 3rem;
     border: 1px solid #1e1b1b;
     padding: .5rem
+}
+
+@media only screen and (max-width: 62.5em) {
+    .form__input {
+        width: 100%
+    }
 }
 
 .form__input-box {
@@ -175,7 +199,13 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     max-height: 20rem;
-    width: 70%
+    width: 100%
+}
+
+@media only screen and (max-width: 31.25em) {
+    .form__input-box {
+        max-height: none
+    }
 }
 
 .form__input-box-item input {
@@ -197,10 +227,16 @@ body {
 
 .form__select {
     font-family: "Raleway", sans-serif;
-    width: 70%;
+    width: 60%;
     border: 1px solid #1e1b1b;
     padding: .5rem;
     margin-bottom: .8rem
+}
+
+@media only screen and (max-width: 62.5em) {
+    .form__select {
+        width: 100%
+    }
 }
 
 .form__textarea {
@@ -210,11 +246,17 @@ body {
     border: 1px solid #1e1b1b
 }
 
+@media only screen and (max-width: 62.5em) {
+    .form__textarea {
+        width: 100%
+    }
+}
+
 .form__error-msg {
     display: block;
     font-family: "Raleway", sans-serif;
     font-size: 1.3rem;
-    color: #9d0606;
+    color: #ef0808;
     font-weight: 600
 }
 
@@ -226,6 +268,12 @@ body {
     background-color: #c7c7c7;
     border-radius: 4px;
     overflow: hidden
+}
+
+@media only screen and (max-width: 62.5em) {
+    .progress {
+        width: 50%
+    }
 }
 
 .progress__bar {
@@ -240,29 +288,102 @@ body {
 
 .content-box {
     background-color: #fff;
-    width: 70vw;
-    height: 85vh;
+    width: 80vw;
+    height: 75vh;
     border-radius: 2rem;
     box-shadow: 0.2rem 0.4rem 2rem rgba(64, 46, 50, 0.35);
     overflow: hidden;
     display: grid;
     grid-template-rows:90% 10%;
-    grid-template-columns:35% 65%
+    grid-template-columns:40% 60%
+}
+
+@media only screen and (max-width: 75em) {
+    .content-box {
+        width: 85vw
+    }
+}
+
+@media only screen and (max-width: 62.5em) {
+    .content-box {
+        grid-template-columns:100%;
+        grid-template-rows:30vh 1fr 10vh;
+        margin: 3rem;
+        width: 90vw;
+        height: 90vh
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .content-box {
+        grid-template-rows:40vh 1fr 10vh;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0
+    }
 }
 
 .sidebar {
     grid-row: 1 / -1;
     grid-column: 1 / 2;
-    background: url("../img/sidebar-img.jpg") no-repeat -2rem;
+    background: url("../img/sidebar-img.jpg") no-repeat 0 0;
     background-size: cover;
     padding: 3rem;
+    border-radius: 2rem 0 0 2rem;
     z-index: 10
+}
+
+@media only screen and (max-width: 75em) {
+    .sidebar {
+        background-position: -7rem
+    }
+}
+
+@media only screen and (max-width: 62.5em) {
+    .sidebar {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1;
+        background: url("../img/sidebar-img-landscape.jpg") no-repeat 100% 60%;
+        background-size: 110%;
+        border-radius: 2rem 2rem 0 0;
+        padding: .5rem;
+        display: flex
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .sidebar {
+        background: url("../img/sidebar-img.jpg") no-repeat 0 50%;
+        background-size: cover;
+        border: none;
+        border-radius: 0;
+        padding: 2rem;
+        display: block
+    }
 }
 
 .sidebar__logo {
     display: block;
     width: 80%;
     margin: 3rem auto
+}
+
+@media only screen and (max-width: 62.5em) {
+    .sidebar__logo {
+        width: 40%;
+        -o-object-fit: contain;
+        object-fit: contain;
+        align-content: center;
+        margin: 0 4rem
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .sidebar__logo {
+        width: 70%;
+        margin: 1rem auto
+    }
 }
 
 .sidebar__logo path {
@@ -277,6 +398,13 @@ body {
     justify-content: center
 }
 
+@media only screen and (max-width: 62.5em) {
+    .footer {
+        grid-row: 3 / -1;
+        grid-column: 1 / -1
+    }
+}
+
 .header {
     margin-bottom: 5rem
 }
@@ -286,6 +414,29 @@ body {
     grid-column: 2 / 3;
     padding: 5rem 6rem;
     height: 100%
+}
+
+@media only screen and (max-width: 75em) {
+    .main-content {
+        padding: 4rem
+    }
+}
+
+@media only screen and (max-width: 62.5em) {
+    .main-content {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        height: 100%
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .main-content {
+        padding: 2rem;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content
+    }
 }
 
 .hidden {
